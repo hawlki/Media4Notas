@@ -39,10 +39,7 @@ namespace media4notas
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Favor digitar números entre 0 e 10");
-                Console.ResetColor();
-                Environment.Exit(1);
             }
-
             else
             {
                 Double media = (nota1 + nota2 + nota3 + nota4) / 4;
@@ -52,28 +49,22 @@ namespace media4notas
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"Sua média é {media:N1}");
                     Console.WriteLine("Situação: reprovado");
-                    Console.ResetColor();
-                    Environment.Exit(1);
                 }
-
-                if(media >=5 && media <= 6)
+                else if(media >=5 && media <= 6)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine($"Sua média é {media:N1}");
                     Console.WriteLine("Situação: recuperação");
-                    Console.ResetColor();
-                    Environment.Exit(1);
                 }
-
-                if(media > 6)
+                else
                 {
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine($"Sua média é {media:N1}");
                     Console.WriteLine("Situação: aprovado");
-                    Console.ResetColor();
-                    Environment.Exit(1);
                 }
             }
+            
+            Console.ResetColor();
         }
     }
 }
